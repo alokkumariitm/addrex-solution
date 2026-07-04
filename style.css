@@ -1,0 +1,662 @@
+/* ==========================================================================
+   ADDREX TIGHT LUXURY THEME Engine - FIXED STRUCTURAL SIZES
+   ========================================================================== */
+
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-surface: #111111;
+    --orange: #ff6b00;
+    --border: #1a1a1a;
+    --text-main: #ffffff;
+    --text-grey: #999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* GLOBAL RESPONSIVE MAX-WIDTH CONTAINER (Yeh loose spacing theek karega) */
+.section-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.accent { color: var(--orange); }
+.text-orange { color: var(--orange); }
+
+/* SUBTLE BACKGLOW */
+.bg-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.04) 0%, transparent 70%);
+    top: 0; left: 50%; transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* STICKY NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.nav-logo { height: 32px; width: auto; }
+.brand-name { font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--text-grey); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+.nav-btn {
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(255,255,255,0.02);
+    transition: all 0.2s;
+}
+.nav-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+/* HERO SECTION - TIGHT COMPACT GRID */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero-container { max-width: 780px; }
+.badge {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 6px 14px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.hero-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 3.2rem;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-desc {
+    color: var(--text-grey);
+    font-size: 1.05rem;
+    line-height: 1.55;
+    margin-bottom: 32px;
+}
+.hero-btns { display: flex; justify-content: center; gap: 14px; }
+
+/* THE EXACT BUTTON ENGINE */
+.btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+.btn-solid { background: var(--orange); color: #000; }
+.btn-solid:hover { background: #e05e00; }
+.btn-outline { border: 1px solid var(--border); color: #fff; }
+.btn-outline:hover { background: rgba(255,255,255,0.02); border-color: var(--text-grey); }
+
+/* STRUCTURAL CONTENT GRID SYSTEM */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+.content-box {
+    background: #0d0d0d;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 50px 40px;
+}
+.center-title { font-family: 'Sora', sans-serif; font-size: 2.2rem; text-align: center; margin-bottom: 8px; }
+.center-subtitle { color: var(--text-grey); text-align: center; font-size: 0.95rem; margin-bottom: 40px; }
+
+/* ABOUT SECTION */
+.about { padding: 80px 0; }
+.about-left h2 { font-family: 'Sora', sans-serif; font-size: 2.4rem; margin-bottom: 20px; line-height: 1.2; }
+.about-left p { color: var(--text-grey); line-height: 1.6; margin-bottom: 16px; font-size: 0.95rem; }
+.focus-area h3 { font-size: 1.15rem; margin: 20px 0 12px; }
+.focus-list { list-style: none; }
+.focus-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.92rem; }
+.focus-list li i { color: var(--orange); }
+.mission { border-left: 2px solid var(--orange); padding-left: 14px; font-style: italic; margin-top: 20px; }
+.founder-box { background: #121212; border: 1px solid var(--border); padding: 35px; border-radius: 20px; text-align: center; }
+.avatar-wrap { width: 130px; height: 130px; border-radius: 50%; border: 2px solid var(--orange); margin: 0 auto 20px; padding: 4px; }
+.avatar-wrap img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.role { color: var(--text-grey); font-size: 0.9rem; margin-top: 4px; }
+
+/* TEAM GRID */
+.team { padding: 60px 0; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+.team-card { background: #121212; border: 1px solid var(--border); padding: 24px; border-radius: 14px; text-align: center; }
+.member-img { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 14px; background: #1a1a1a; }
+.member-img img { width: 100%; height: 100%; border-radius: 50%; }
+.team-card h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.team-card p { font-size: 0.85rem; }
+
+/* EXACT SCREEN MATCH PRICING MECHANISM (From image_3c7966.png) */
+.plans { padding: 80px 0; }
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.plan-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Highlight/Featured Card Core Sync */
+.plan-card.featured {
+    border: 1.5px solid var(--orange) !important;
+    box-shadow: 0 0 25px rgba(255, 107, 0, 0.08);
+}
+.card-tag {
+    position: absolute;
+    top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--orange); color: #000;
+    font-family: var(--font-space); font-weight: 700; font-size: 0.68rem;
+    padding: 4px 12px; border-radius: 6px; letter-spacing: 0.5px;
+}
+.plan-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 14px; color: #fff; }
+.plan-card .price { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; }
+.plan-card .price::before { content: '₹'; font-size: 1.8rem; margin-right: 2px; }
+.features { list-style: none; border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 24px; }
+.features li { margin-bottom: 12px; color: #d1d1d1; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; }
+.features li i { color: var(--orange); font-size: 0.95rem; }
+.card-btn {
+    display: block; text-align: center; width: 100%; padding: 12px; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    background: transparent; color: var(--orange); border: 1px solid rgba(255,107,0,0.25);
+    transition: all 0.2s;
+}
+.card-btn:hover { border-color: var(--orange); background: rgba(255,107,0,0.03); }
+.featured .card-btn { background: var(--orange) !important; color: #000 !important; border: 1px solid var(--orange) !important; }
+.featured .card-btn:hover { background: #e05e00 !important; }
+
+/* CONCISE BANNER INTERPRETATION */
+.banner-section { padding: 40px 20px; }
+.banner-box { max-width: 1060px; margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; text-align: center; }
+.banner-box h2 { font-size: 1.8rem; margin-bottom: 8px; }
+.banner-box p { color: var(--text-grey); font-size: 0.95rem; margin-bottom: 24px; }
+.banner-btns { display: flex; justify-content: center; gap: 14px; }
+
+/* EXPERTISE WORK LAYOUT GRID */
+.expertise { padding: 80px 0; }
+.expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.exp-card { background: var(--bg-surface); border: 1px solid var(--border); padding: 28px; border-radius: 14px; cursor: pointer; transition: all 0.25s; }
+.exp-card:hover { border-color: #333; background: #161616; transform: translateY(-2px); }
+.exp-icon { font-size: 1.5rem; color: var(--orange); margin-bottom: 16px; }
+.exp-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.exp-card p { color: var(--text-grey); font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px; }
+.view-text { font-size: 0.82rem; color: var(--orange); font-weight: 600; }
+
+/* REVIEWS MARQUEE ENGINE */
+.reviews { padding: 60px 0; }
+.marquee-window { overflow: hidden; width: 100%; position: relative; margin-top: 20px; }
+.marquee-inner { display: flex; gap: 20px; width: max-content; animation: scrollMarquee 28s linear infinite; }
+.review-box { background: #121212; border: 1px solid var(--border); padding: 24px; border-radius: 14px; width: 300px; }
+.stars { color: var(--orange); font-size: 0.85rem; margin-bottom: 8px; }
+.review-box p { font-size: 0.85rem; color: #d1d1d1; line-height: 1.4; margin-bottom: 12px; }
+.review-box h4 { font-size: 0.9rem; color: #fff; }
+
+/* CONTACT MANAGEMENT SYSTEMS */
+.contact { padding: 80px 0; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 30px 0; }
+.c-card { background: var(--bg-surface); border: 1px solid var(--border); padding: 30px 20px; border-radius: 14px; text-align: center; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.c-card:hover { border-color: var(--orange); }
+.c-card i { font-size: 1.8rem; color: var(--orange); margin-bottom: 14px; }
+.c-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.c-card p { color: var(--text-grey); font-size: 0.88rem; }
+.socials { text-align: center; margin-top: 30px; }
+.social-icon, .socials a { color: var(--text-grey); font-size: 1.2rem; margin: 0 10px; transition: color 0.2s; }
+.socials a:hover { color: var(--orange); }
+
+/* FOOTER ARCHITECTURE */
+.footer { border-top: 1px solid var(--border); padding: 30px 20px; background: #050505; }
+.footer-wrap { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: var(--text-grey); font-size: 0.85rem; }
+.f-left { display: flex; align-items: center; gap: 10px; color: #fff; }
+.f-left img { height: 24px; width: auto; }
+
+/* FIXED FLOATING BUTTON WHATSAPP */
+.wsp-float { position: fixed; bottom: 30px; right: 30px; width: 54px; height: 54px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; box-shadow: 0 8px 20px rgba(37,211,102,0.25); z-index: 999; text-decoration: none; }
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* SMART DEVICE QUERY CONFIGURATION */
+@media (max-width: 900px) {
+    .hero-title { font-size: 2.3rem; }
+    .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+}
+/* ==========================================================================
+   FAQ ACCORDION STYLE SYSTEM
+   ========================================================================== */
+.faq { padding: 60px 0; }
+.faq-container { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+.faq-item {
+    border: 1px solid var(--border);
+    background: #121212;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s;
+}
+.faq-item:hover { border-color: #333; }
+.faq-item.active { border-color: var(--orange); }
+.faq-question {
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.faq-question h3 { font-size: 1.05rem; font-weight: 600; color: #fff; }
+.faq-icon { color: var(--text-grey); font-size: 0.9rem; transition: transform 0.3s, color 0.3s; }
+.faq-item.active .faq-icon { transform: rotate(45deg); color: var(--orange); }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 28px;
+}
+.faq-answer p { color: var(--text-grey); font-size: 0.92rem; line-height: 1.6; padding-bottom: 22px; }
+/* ==========================================================================
+   SPECIAL ORANGE GLOW FAQ HIGHLIGHT
+   ========================================================================== */
+.faq-item.special-glow-faq {
+    border: 1.5px solid var(--orange) !important;
+    background: rgba(255, 107, 0, 0.02) !important;
+    box-shadow: 0 0 25px rgba(255, 107, 0, 0.15), 
+                inset 0 0 15px rgba(255, 107, 0, 0.05) !important;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item.special-glow-faq:hover {
+    background: rgba(255, 107, 0, 0.04) !important;
+    box-shadow: 0 0 35px rgba(255, 107, 0, 0.25), 
+                inset 0 0 20px rgba(255, 107, 0, 0.08) !important;
+}
+
+/* Question text in special box is always sharp and clean */
+.faq-item.special-glow-faq .faq-question h3 {
+    color: var(--orange) !important;
+    font-weight: 700;
+}
+
+.faq-item.special-glow-faq .faq-icon {
+    color: var(--orange) !important;
+}
+/* ==========================================================================
+   MATTE BLACK EXPERTISE CORE LAYOUT - ROUNDED CORNERS WITH ORANGE GLOW
+   ========================================================================== */
+.expertise {
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.exp-card {
+    background-color: #121212; /* Clean exact matte black color */
+    border: 1px solid #1a1a1a; /* Subtle baseline frame */
+    border-radius: 16px; /* Smooth professional rounded corners */
+    padding: 35px 28px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.25s ease, 
+                box-shadow 0.25s ease;
+}
+
+/* Dynamic handling for corner glows on interaction matrix */
+.exp-card:hover {
+    transform: translateY(-4px);
+    background-color: #161616; /* Slick inner surface shift */
+    border-color: rgba(255, 107, 0, 0.45); /* Orange border touch activation */
+    
+    /* Subtle neon cloud concentrated on rounded card profiles */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(255, 107, 0, 0.08);
+}
+
+.exp-icon {
+    font-size: 1.6rem;
+    color: #ff6b00; /* Core signature brand orange */
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.exp-card h3 {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.exp-card p {
+    color: #999999;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.view-text {
+    font-size: 0.85rem;
+    color: #ff6b00;
+    font-weight: 600;
+    transition: letter-spacing 0.2s ease;
+}
+
+.exp-card:hover .view-text {
+    letter-spacing: 0.8px;
+}
+/* ==============================
+   Need Just One Service Banner
+   ============================== */
+
+.banner-section{
+    width:100%;
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner-box{
+    width:100%;
+    max-width:1200px;
+
+    background:#FFF8EC;           /* Cream Background */
+    border:2px solid #F4B400;     /* Golden Border */
+    border-radius:14px;
+
+    padding:60px 40px;
+    text-align:center;
+
+    box-sizing:border-box;
+    transition:.3s ease;
+}
+
+.banner-box:hover{
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.banner-box h2{
+    font-size:48px;
+    font-weight:800;
+    color:#111;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.banner-box p{
+    font-size:20px;
+    color:#555;
+    max-width:850px;
+    margin:0 auto 40px;
+    line-height:1.7;
+}
+
+.banner-btns{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.banner-btns .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:16px 34px;
+
+    border-radius:10px;
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+/* Orange Button */
+
+.banner-btns .btn-solid{
+    background:#FF7A00;
+    color:#fff;
+    border:none;
+}
+
+.banner-btns .btn-solid:hover{
+    background:#E66900;
+    transform:translateY(-2px);
+}
+
+/* White Button */ /*this is the brown one service button css file for custom design*/
+
+.banner-btns .btn-outline{
+    background:#fff;
+    color:#111;
+    border:2px solid #ddd;
+}
+
+.banner-btns .btn-outline:hover{
+    border-color:#FF7A00;
+    color:#FF7A00;
+    transform:translateY(-2px);
+}
+
+@media (max-width:768px){
+
+    .banner-box{
+        padding:40px 25px;
+    }
+
+    .banner-box h2{
+        font-size:32px;
+    }
+
+    .banner-box p{
+        font-size:16px;
+    }
+
+    .banner-btns{
+        flex-direction:column;
+    }
+
+    .banner-btns .btn{
+        width:100%;
+    }
+
+}
+
+/*CSS FOR THE REVIEWS SECTION*/
+/* ==========================================================================
+   MOVING REVIEWS SECTION STYLES (ORANGE GLOW THEME)
+   ========================================================================== */
+.reviews-section {
+  padding: 80px 0;
+  background: transparent; /* Taaki aapka main bg-glow iske peeche bhi dikhe */
+  position: relative;
+}
+
+/* Outer Container: Hide horizontal overflow */
+.review-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* Premium Side-Blur Fade Effect */
+.review-marquee-container::before,
+.review-marquee-container::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+.review-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0d1117 10%, transparent);
+}
+.review-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0d1117 10%, transparent);
+}
+
+/* Horizontal Animation Track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Sharp Rectangle UI Cards matching AddreX Theme */
+.review-card {
+  background: #161b22; /* Card color dark theme */
+  width: 340px;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 4px; /* Pure crisp rectangle style */
+  border: 1px solid #30363d;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect with Orange Border and Orange Neon Glow */
+.review-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff6a00; /* Neon Orange border */
+  box-shadow: 0 12px 40px rgba(255, 106, 0, 0.25); /* Rich Orange Glow */
+}
+
+/* Review Elements */
+.stars {
+  color: #ffc107; /* Gold yellow rating stars */
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.review-card h3 {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+
+/* Badge with Orange tint and border */
+.review-card .badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(255, 106, 0, 0.1); /* Subtle orange fill */
+  color: #ff8c3a; /* Sharp orange readable text */
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.review-card p {
+  color: #c9d1d9;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Smooth Linear Continuous Loop Animation */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
