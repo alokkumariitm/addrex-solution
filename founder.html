@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alok Kumar — Founder & Architect | AddreX Ecosystem</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ==========================================================================
+            EXECUTIVE FOUNDER SUITE STYLING
+            ========================================================================== */
+        .founder-page-wrap {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        /* 1. HERO EXECUTIVE SPLIT */
+        .exec-hero {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 50px;
+            align-items: center;
+            padding-bottom: 50px;
+            border-bottom: 1px solid var(--border, #222);
+        }
+        .exec-left .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-space, 'Space Grotesk', sans-serif);
+            font-size: 0.75rem;
+            color: #ff6b00;
+            background: rgba(255, 107, 0, 0.06);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            padding: 4px 12px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .status-pill .dot {
+            width: 6px;
+            height: 6px;
+            background: #ff6b00;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ff6b00;
+        }
+        .exec-name {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+        .exec-title {
+            font-size: 1.05rem;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+        .exec-bio {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            max-width: 650px;
+        }
+        .exec-right {
+            text-align: center;
+        }
+        .exec-avatar {
+            width: 190px;
+            height: 190px;
+            border-radius: 16px;
+            border: 1px solid var(--border, #222);
+            padding: 4px;
+            background: #111;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .exec-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* 2. STATS & CREDENTIALS MATRIX */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 40px 0 70px;
+        }
+        .stat-card {
+            background: #111;
+            border: 1px solid var(--border, #222);
+            padding: 22px 20px;
+            border-radius: 12px;
+            transition: border-color 0.2s;
+        }
+        .stat-card:hover {
+            border-color: #333;
+        }
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .stat-number.accent {
+            color: #ff6b00;
+        }
+        .stat-label {
+            color: #888;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 3. CORE TECHNICAL EXPERTISE */
+        .section-header-block {
+            margin-bottom: 30px;
+        }
+        .section-header-block h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .section-header-block p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 70px;
+        }
+        .skill-group {
+            background: #111;
+            border: 1px solid var(--border, #222);
+            padding: 20px 22px;
+            border-radius: 12px;
+        }
+        .skill-group h4 {
+            font-size: 0.95rem;
+            color: #fff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .skill-group h4 i {
+            color: #ff6b00;
+            font-size: 0.9rem;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            background: #181818;
+            color: #ccc;
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #222;
+        }
+
+        /* 4. VENTURES & PLATFORMS (ECOSYSTEM) */
+        .ventures-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .venture-item {
+            background: #111;
+            border: 1px solid var(--border, #222);
+            border-radius: 14px;
+            padding: 28px 32px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        .venture-item:hover {
+            border-color: rgba(255, 107, 0, 0.4);
+            background: #141414;
+            transform: translateY(-2px);
+        }
+        .venture-item.highlight-venture {
+            border: 1.5px solid #ff6b00;
+            background: #121212;
+            box-shadow: 0 0 25px rgba(255, 107, 0, 0.08);
+        }
+        .venture-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .venture-role-badge {
+            font-family: var(--font-space, 'Space Grotesk', sans-serif);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #ff6b00;
+            background: rgba(255, 107, 0, 0.08);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .venture-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .venture-desc {
+            color: #aaa;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+            max-width: 680px;
+        }
+        .venture-stack {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .stack-dot {
+            font-size: 0.75rem;
+            color: #777;
+        }
+        .venture-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid var(--border, #222);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .venture-btn:hover {
+            border-color: #ff6b00;
+            color: #ff6b00;
+        }
+        .status-tag {
+            font-size: 0.8rem;
+            color: #777;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #222;
+            border-radius: 8px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 860px) {
+            .exec-hero { grid-template-columns: 1fr; text-align: left; gap: 30px; }
+            .exec-right { text-align: left; }
+            .exec-avatar { width: 140px; height: 140px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .skills-matrix { grid-template-columns: 1fr; }
+            .venture-item { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="logowithouname.png" alt="AddreX Logo" class="nav-logo">
+                <span class="brand-name">AddreX <span class="accent">Solution</span></span>
+            </a>
+            <div class="nav-links">
+                <!-- <a href="index.html">Home</a> -->
+                <!-- <a href="index.html#plans">Plans</a> -->
+                <!-- <a href="index.html#expertise">Expertise</a> -->
+                <a href="founder.html" style="color: #ff6b00;">Founder</a>
+                <!-- <a href="index.html#contact">Contact</a> -->
+            </div>
+            <a href="mailto:contact.alokkumar.in@gmail.com" class="nav-btn">Connect With Me</a>
+        </div>
+    </nav>
+
+    <!-- MAIN FOUNDER EXECUTIVE VIEW -->
+    <main class="founder-page-wrap">
+        
+        <!-- 1. EXECUTIVE HEADER -->
+        <header class="exec-hero">
+            <div class="exec-left">
+                <div class="status-pill">
+                    <span class="dot"></span>Alok's Venture
+                </div>
+                <h1 class="exec-name">Alok Kumar (IIT Madras)</h1>
+                <p class="exec-title">
+                Software Engineer | Agentic AI Architect | Gemini Certified Educator 
+                </p>
+                <p class="exec-bio">
+                    Founder & Managing Director at <b>AddreX Solution</b> | <b>Building AI Agents</b> | <b>Business Automation</b> | <b>Scalable Full-Stack Systems</b>.
+                </p>
+            </div>
+            <div class="exec-right">
+                <div class="exec-avatar">
+                    <!-- Updated Founder Image Name: foundermore.png -->
+                    <img src="foundermore.png" alt="Alok Kumar">
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. HIGH-IMPACT CREDENTIALS & METRICS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number accent">01 / AI</div>
+                <div class="stat-label"><b>Intelligent Systems</b></div>
+                <div class="stat-label">BEYOND AUTOMATION</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">02 / BUILD</div>
+                <div class="stat-label">Digital Ventures</div>
+                <div class="stat-label">IDEAS INTO SYSTEMS</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">03 / CODE</div>
+                <div class="stat-label">Full-Stack Engineering</div>
+                <div class="stat-label">BUILT FROM THE CORE</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number accent">04 / VISION</div>
+                <div class="stat-label">Future-Driven Tech</div>
+                <div class="stat-label">ENGINEER WHAT'S NEXT</div>
+            </div>
+        </section>
+
+        <!-- 3. TECHNICAL MATRIX -->
+        <section>
+            <div class="section-header-block">
+                <h2>Engineering Competencies</h2>
+                <p>Architectural disciplines practiced across ventures and client ecosystems.</p>
+            </div>
+            <div class="skills-matrix">
+                <div class="skill-group">
+                    <h4><i class="fa-solid fa-brain"></i> Artificial Intelligence</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI-Calling Agents</span>
+                        <span class="skill-tag">AI Chatbots & Assistants</span>
+                        <span class="skill-tag">AI-Creator Clone</span>
+                        <span class="skill-tag">Intelligent Workflow Automation</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4><i class="fa-solid fa-code"></i> Engineering & Web</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Full Stack Development</span>
+                        <span class="skill-tag">Custom Website Development</span>
+                        <span class="skill-tag">Backend & Database Architecture</span>
+                        <span class="skill-tag">E-commerce Development</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4><i class="fa-solid fa-mobile-screen"></i> Mobile & Native</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Custom Mobile Apps</span>
+                        <span class="skill-tag">Business Management Apps</span>
+                        <span class="skill-tag">App Maintenance & Updates</span>
+                        <span class="skill-tag">Admin Panel Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. VENTURE ECOSYSTEM -->
+        <section>
+            <div class="section-header-block">
+                <h2>Build by Alok</h2>
+                <p>Platforms, companies, and digital ecosystems founded and powered by <b>Alok Kumar</b></p>
+            </div>
+
+            <div class="ventures-list">
+    <!-- Venture 1: AddreX Solution -->
+                <div class="venture-item highlight-venture">
+                    <div>
+                        <div class="venture-meta">
+                            <span class="venture-role-badge">Founder & Managing Director</span>
+                            <span class="stack-dot">• Solution Agency</span>
+                        </div>
+                        <h3 class="venture-title">AddreX Solution</h3>
+                        <p class="venture-desc">
+                        AI and technology agency building custom software, intelligent AI agents, and business automation systems.    
+                        </p>
+                        <div class="venture-stack">
+                            <span class="stack-dot">AI Solutions</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">Business Automation</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">Custom Software</span>
+                        </div>
+                    </div>
+                    <a href="index.html" class="venture-btn">Explore Company →</a>
+                </div>
+
+                <!-- Venture 2: LNMU Resources -->
+                <div class="venture-item">
+                    <div>
+                        <div class="venture-meta">
+                            <span class="venture-role-badge">Co-Founder & Technical Architect</span>
+                            <span class="stack-dot">• EdTech Platform</span>
+                        </div>
+                        <h3 class="venture-title">LNMU Resources</h3>
+                        <p class="venture-desc">
+                        Academic platform providing exam papers, university notes, syllabus guides, and student resources.    
+                        </p>
+                        <div class="venture-stack">
+                            <span class="stack-dot">EdTech</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">Academic Infrastructure</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">Web Platform</span>
+                        </div>
+                    </div>
+                    <a href="https://lnmuresources.com" target="_blank" class="venture-btn">Visit Platform ↗</a>
+                </div>
+
+                <!-- Venture 3: KOIR Production -->
+                <div class="venture-item">
+                    <div>
+                        <div class="venture-meta">
+                            <span class="venture-role-badge">Founder</span>
+                            <span class="stack-dot">• Media & Creative Studio</span>
+                        </div>
+                        <h3 class="venture-title">KOIR Production</h3>
+                        <p class="venture-desc">
+                        Creative media studio delivering tailored animations, 3D educational visuals, and AI-powered video content for modern learning and storytelling.    
+                        </p>
+                        <div class="venture-stack">
+                            <span class="stack-dot">Video Production</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">Brand Media</span>
+                            <span class="stack-dot">/</span>
+                            <span class="stack-dot">TLM</span>
+                        </div>
+                    </div>
+                    <span class="status-tag">Launching Soon</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MINIMAL EXECUTIVE FOOTER -->
+    <footer class="footer">
+        <div class="footer-wrap">
+            <div class="f-left">
+                <img src="logowithouname.png" alt="Logo">
+                <span><strong>AddreX Solution</strong> — Powering Next-Gen Solution.</span>
+            </div>
+            <p>&copy; 2026 Alok Kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
