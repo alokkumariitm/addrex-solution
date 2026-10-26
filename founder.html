@@ -272,14 +272,49 @@
         }
 
         /* RESPONSIVE */
-        @media (max-width: 860px) {
+        /* @media (max-width: 860px) {
             .exec-hero { grid-template-columns: 1fr; text-align: left; gap: 30px; }
             .exec-right { text-align: left; }
             .exec-avatar { width: 140px; height: 140px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .skills-matrix { grid-template-columns: 1fr; }
             .venture-item { grid-template-columns: 1fr; }
+        } */
+         /* RESPONSIVE FIX FOR MOBILE */
+    @media (max-width: 860px) {
+        .exec-hero { 
+            grid-template-columns: 1fr; 
+            text-align: center; /* Saara text center ho jayega */
+            gap: 30px; 
         }
+        .exec-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Text aur status pill center mein aa jayenge */
+        }
+        .exec-bio {
+            text-align: center;
+        }
+        .exec-right { 
+            text-align: center; 
+            display: flex;
+            justify-content: center;
+        }
+        .exec-avatar { 
+            width: 160px; 
+            height: 160px; 
+            margin: 0 auto; /* Photo bilkul beech (center) mein aa jayegi */
+        }
+        .stats-grid { 
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        .skills-matrix { 
+            grid-template-columns: 1fr; 
+        }
+        .venture-item { 
+            grid-template-columns: 1fr; 
+        }
+    }
     </style>
 </head>
 <body>
